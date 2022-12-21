@@ -11,7 +11,7 @@ module.exports = {
 
   // GET a single user by its _id and populated thought and friend data
   getUserById(req, res) {
-    User.findOne({ _id: req.params.UserId })
+    User.findOne({ _id: req.params.id })
       .populate([
         { path: "thoughts", select: "-__v" },
         { path: "friends", select: "-__v" },
@@ -39,7 +39,7 @@ module.exports = {
 
   updateUser(req, res) {
     User.findOneAndUpdate(
-      { _id: req.params.UserId },
+      { _id: req.params.id },
       { $set: req.body },
       { runValidators: true, new: true }
     )
