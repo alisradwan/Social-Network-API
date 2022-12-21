@@ -24,6 +24,7 @@
   "homepage": "https://github.com/alisradwan/Social-Network-API#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "moment": "^2.29.4",
     "mongoose": "^6.8.1"
   }
 }
